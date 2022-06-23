@@ -1,0 +1,95 @@
+version: 2
+
+sources:
+  - name: aw_proj_final
+    schema: Proj_Final_Indicium
+    description: Projeto final indicium sobre DB Adventure Works
+    tables:
+      - name: aw_person
+        columns:
+          - name: businessentityid
+            description: Chave Primária da tabela aw_person.
+            tests:
+              - unique
+          - name: persontype
+          - name: namestyle
+          - name: title
+          - name: firstname
+          - name: middlename
+          - name: lastname
+          - name: suffix
+          - name: emailpromotion
+          - name: additionalcontactinfo
+          - name: demographics
+          - name: rowguid
+          - name: modifieddate
+      - name: aw_person_adress
+        columns:
+          - name: addressid
+          - name: addressline1
+          - name: addressline2
+          - name: city
+          - name: stateprovinceid
+          - name: postalcode
+          - name: spatiallocation
+          - name: rowguid
+          - name: modifieddate
+      - name: aw_person_country_region
+        columns:
+          - name: countryregioncode
+          - name: name
+          - name: modifieddate
+      - name: aw_sales_creditcard
+        columns:
+          - name: creditcardid
+          - name: cardtype
+          - name: cardnumber
+          - name: expmonth
+          - name: expyear
+          - name: modifieddate
+      - name: aw_sales_order_detail
+        columns:
+          - name: salesorderid
+          - name: salesorderdetailid
+          - name: carriertrackingnumber
+          - name: orderqty
+          - name: productid
+          - name: specialofferid
+          - name: unitprice
+          - name: unitpricediscount
+          - name: rowguid
+          - name: modifieddate
+      - name: aw_sales_order_header
+        columns:
+          - name: salesorderid
+          - name: revisionnumber
+          - name: orderdate
+          - name: duedate
+          - name: shipdate
+          - name: status
+          - name: onlineorderflag
+          - name: purchaseordernumber
+          - name: accountnumber
+          - name: customerid
+          - name: salespersonid
+          - name: territoryid
+          - name: billtoaddressid
+          - name: shiptoaddressid
+          - name: shipmethodid
+          - name: creditcardid
+          - name: creditcardapprovalcode
+          - name: currencyrateid
+          - name: subtotal
+          - name: taxamt
+          - name: freight
+          - name: totaldue
+          - name: comment
+          - name: rowguid
+          - name: modifieddate
+      - name: aw_sales_reason
+        columns:
+          - name: salesreasonid
+          - name: name
+          - name: reasontype
+          - name: modifieddate
+        

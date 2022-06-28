@@ -1,8 +1,8 @@
 with source_person as 
 (
     select 
-        businessentityid			
-        , persontype		
+        businessentityid as business_entity_id		
+        , persontype as person_type
         , namestyle			
         , title		
         , firstname		

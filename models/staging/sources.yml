@@ -92,4 +92,52 @@ sources:
           - name: name
           - name: reasontype
           - name: modifieddate
+      - name: aw_person_state_province
+        columns:
+        - name: customerid
+        - name: personid
+        - name: storeid
+        - name: territoryid
+        - name: rowguid
+        - name: modifieddate
+      - name: aw_product
+        columns:        
+        - name: productid
+        - name: name
+        - name: productnumber
+        - name: makeflag
+        - name: finishedgoodsflag
+        - name: color
+        - name: safetystocklevel
+        - name: reorderpoint
+        - name: standardcost
+        - name: listprice
+        - name: size
+        - name: sizeunitmeasurecode
+        - name: weightunitmeasurecode
+        - name: weight
+        - name: daystomanufacture
+        - name: productline
+        - name: class
+        - name: style
+        - name: productsubcategoryid
+        - name: productmodelid
+        - name: sellstartdate
+        - name: sellenddate
+        - name: discontinueddate
+        - name: rowguid
+        - name: modifieddate
+      - name: aw_sales_customer
+        columns:
+          - name: customerid
+          - name: personid
+          - name: storeid
+          - name: territoryid
+          - name: rowguid
+          - name: modifieddate
+      - name: aw_sales_salesorder_header_sales_reason
+        columns:
+        - name: salesorderid
+        - name: salesreasonid
+        - name: modifieddate
         

@@ -6,7 +6,7 @@ with source_sales_order_header as
         ,orderdate
         ,duedate	
         ,shipdate
-        ,'status' as status_order
+        ,`status` as status_order
         ,onlineorderflag	
         ,purchaseordernumber	
         ,accountnumber

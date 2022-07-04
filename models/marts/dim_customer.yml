@@ -3,14 +3,21 @@ version: 2
 models:
   - name: dim_customer
     columns:
-      - name: location_sk
-        description: Chave Primaria da dimensão dim_customer
-        #tests:
+      - name: customer_sk
+        description: Chave surrogate
+        tests:
+          - unique
+          - not_null
       - name: customer_id
+        description: Chave Primária
+        tests:
+          - unique
       - name: business_entity_id
+        description: Chave Estrangeira
       - name: person_id
       - name: person_type
       - name: first_name
+        description: Primeiro Nome do Cliente
       - name: middle_name
       - name: last_name
        

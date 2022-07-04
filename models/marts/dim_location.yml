@@ -4,13 +4,24 @@ models:
   - name: dim_location
     columns:
       - name: location_sk
-        description: Chave Primaria da dimensão dim_location
-        #tests:
+        description: Chave surrogate 
+        tests:
+          - unique
+          - not_null
       - name: address_id
+        description: Chave primária
+        tests:
+          - unique
       - name: city
+        description: Cidade
       - name: address_line_1
+        description: Endereço principal
       - name: address_line_2
       - name: state_province_name
+        description: Estado/ Provincia
       - name: country_name
+        description: País
       - name: country_region_code
+        description: Acronimo do País
       - name: postal_code
+        description: CEP

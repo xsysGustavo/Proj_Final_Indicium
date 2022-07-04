@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: fct_order
+    columns:
+      - name: customer_sk
+        description: Chave Surrogate da dimensão customer
+        tests:
+            - not_null
+            - relationships:
+                to: ref('dim_customer')
+                field: customer_sk
+      - name: location_sk
+        description: Chave Surrogate da dimensão location
+        tests:
+            - not_null
+            - relationships:
+                to: ref('dim_location')
+                field: location_sk
+      - name: product_sk
+        description: Chave Surrogate da dimensão products
+        tests:
+            - not_null
+            - relationships:
+                to: ref('dim_products')
+                field: product_sk
+      - name: sale_sk
+        description: Chave Surrogate da dimensão sales
+        tests:
+            - not_null
+            - relationships:
+                to: ref('dim_sales')
+                field: sale_sk

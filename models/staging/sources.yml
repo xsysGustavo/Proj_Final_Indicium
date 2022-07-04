@@ -11,6 +11,7 @@ sources:
             description: Chave Primária da tabela aw_person.
             tests:
               - unique
+              - not_null
           - name: persontype
           - name: namestyle
           - name: title
@@ -30,6 +31,9 @@ sources:
         columns:
           - name: addressid
             description: Chave Primária da tabela aw_person_adress.
+            tests:
+              - unique
+              - not_null
           - name: addressline1
             description: Endereço principal da Person
           - name: addressline2
@@ -44,13 +48,19 @@ sources:
         columns:
           - name: countryregioncode
             description: Acronimo do País
+            tests:
+              - unique
+              - not_null
           - name: name
             description: Nome do País
           - name: modifieddate
       - name: aw_sales_creditcard
         columns:
           - name: creditcardid
-            description: Chave Primaria 
+            description: Chave Primaria
+            tests:
+              - unique
+              - not_null
           - name: cardtype
             description: Bandeira do Cartão
           - name: cardnumber
@@ -60,7 +70,7 @@ sources:
       - name: aw_sales_order_detail
         columns:
           - name: salesorderid
-            description: Chave Primaria 
+            description: Chave Primaria
           - name: salesorderdetailid
           - name: carriertrackingnumber
           - name: orderqty
@@ -75,7 +85,10 @@ sources:
       - name: aw_sales_order_header
         columns:
           - name: salesorderid
-            description: Chave Primaria 
+            description: Chave Primaria
+            tests:
+              - unique
+              - not_null
           - name: revisionnumber
           - name: orderdate
             description: Data da compra 
@@ -109,16 +122,25 @@ sources:
       - name: aw_sales_reason
         columns:
           - name: salesreasonid
-            description: Chave Primaria 
+            description: Chave Primaria
+            tests:
+              - unique
+              - not_null
           - name: name
             description: Nome/Motivo da Venda/ Marketing
           - name: reasontype
             description: Motivo da Venda
+            tests:
+              - accepted_values:
+                  values: ['Other','Promotion','Marketing']
           - name: modifieddate
       - name: aw_person_state_province
         columns:
           - name: stateprovinceid
             description: Chave Primaria
+            tests:
+              - unique
+              - not_null
           - name: stateprovincecode
             description: Acronimo do Estado
           - name: countryregioncode
@@ -132,14 +154,20 @@ sources:
         columns:        
         - name: productid
           description: Chave Primaria
+          tests:
+              - unique
+              - not_null
         - name: name
           description: Nome do Produto
         - name: productnumber
           description: Numero do Produto/ Codigo
         - name: makeflag
         - name: finishedgoodsflag
-        - name: color
+        - name: color          
           description: Cor do Produto
+          tests:
+            - accepted_values:
+                values: ['Red','Black','White','Blue','Multi','Silver','Yellow','Grey','Silver/Black']
         - name: safetystocklevel
           description: Nivel de segurança pro estoque
         - name: reorderpoint
@@ -170,6 +198,9 @@ sources:
         columns:
           - name: customerid
             description: Chave Primaria
+            tests:
+              - unique
+              - not_null
           - name: personid
             description: Chave Estrangeira da tabela Person
           - name: storeid

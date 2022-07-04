@@ -4,16 +4,29 @@ models:
   - name: dim_sales
     columns:
       - name: sale_sk
-        description: Chave Primaria da dimensão dim_customer
+        description: Chave surrogate da dimensão dim_sales
+        tests:
+          - unique
+          - not_null
       - name: sales_order_id
+        description: Chave primaria da dimensão dim_sales
+        tests:
+            - not_null
       - name: order_date
+        description: Data da venda
       - name: bill_to_address_id
       - name: credit_card_id
+        description: Chave estrangeira
       - name: sale_customer_id
+        description: Chave estrangeira
       - name: status_order
+        description: Status do pagamento
       - name: sales_name
+        description: Tipo da Venda
       - name: reason_type
+        description: Como foi vendido o produto/Marketing
       - name: card_type
+        description: Bandeira do Cartão
       - name: card_number
       - name: exp_month
       - name: exp_year

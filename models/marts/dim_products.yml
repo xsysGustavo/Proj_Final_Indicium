@@ -4,19 +4,34 @@ models:
   - name: dim_products
     columns:
       - name: product_sk
-        description: Chave Primaria da dimensão dim_customer
-        #tests:
+        description: Chave surrogate
+        tests:
+          - unique
+          - not_null
       - name: product_id
+        description: Chave primaria
+        tests:
+          - not_null
       - name: sales_order_id
       - name: sales_order_detail_id
       - name: product_name
+        description: Nome do Produto
       - name: product_number
+        description: Número do Produto
       - name: color
+        description: Número do Produto
       - name: safety_stock_level
+        description: Quantidade de unidades de segurança do estoque
       - name: standard_cost
+        description: Custo Padrão do Produto
       - name: list_price
+        description: Preço de tabela do Produto
       - name: product_size
+        description: Tamanho do Produto
       - name: product_weight
+        description: Peso do Produto
       - name: order_qty
+        description: Quantidade de Pedidos
       - name: unit_price
+        description: Valor Unitário do Produto
        

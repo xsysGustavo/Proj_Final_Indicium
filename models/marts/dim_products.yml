@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_products
+    columns:
+      - name: product_sk
+        description: Chave Primaria da dimensão dim_customer
+        #tests:
+      - name: product_id
+      - name: sales_order_id
+      - name: sales_order_detail_id
+      - name: product_name
+      - name: product_number
+      - name: color
+      - name: safety_stock_level
+      - name: standard_cost
+      - name: list_price
+      - name: product_size
+      - name: product_weight
+      - name: order_qty
+      - name: unit_price
+       

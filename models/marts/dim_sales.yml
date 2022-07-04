@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_sales
+    columns:
+      - name: sale_sk
+        description: Chave Primaria da dimensão dim_customer
+      - name: sales_order_id
+      - name: order_date
+      - name: bill_to_address_id
+      - name: credit_card_id
+      - name: sale_customer_id
+      - name: status_order
+      - name: sales_name
+      - name: reason_type
+      - name: card_type
+      - name: card_number
+      - name: exp_month
+      - name: exp_year

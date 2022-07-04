@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_location
+    columns:
+      - name: location_sk
+        description: Chave Primaria da dimensão dim_location
+        #tests:
+      - name: address_id
+      - name: city
+      - name: address_line_1
+      - name: address_line_2
+      - name: state_province_name
+      - name: country_name
+      - name: country_region_code
+      - name: postal_code

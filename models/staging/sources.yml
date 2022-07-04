@@ -15,8 +15,11 @@ sources:
           - name: namestyle
           - name: title
           - name: firstname
+            description: Primeiro nome
           - name: middlename
+            description: Nome do meio
           - name: lastname
+            description: Ultimo nome
           - name: suffix
           - name: emailpromotion
           - name: additionalcontactinfo
@@ -26,10 +29,13 @@ sources:
       - name: aw_person_adress
         columns:
           - name: addressid
+            description: Chave Primária da tabela aw_person_adress.
           - name: addressline1
+            description: Endereço principal da Person
           - name: addressline2
           - name: city
           - name: stateprovinceid
+            description: Chave Estrangeira da table state_province
           - name: postalcode
           - name: spatiallocation
           - name: rowguid
@@ -37,12 +43,16 @@ sources:
       - name: aw_person_country_region
         columns:
           - name: countryregioncode
+            description: Acronimo do País
           - name: name
+            description: Nome do País
           - name: modifieddate
       - name: aw_sales_creditcard
         columns:
           - name: creditcardid
+            description: Chave Primaria 
           - name: cardtype
+            description: Bandeira do Cartão
           - name: cardnumber
           - name: expmonth
           - name: expyear
@@ -50,23 +60,31 @@ sources:
       - name: aw_sales_order_detail
         columns:
           - name: salesorderid
+            description: Chave Primaria 
           - name: salesorderdetailid
           - name: carriertrackingnumber
           - name: orderqty
           - name: productid
+            description: Chave Estrangeira table Product 
           - name: specialofferid
           - name: unitprice
+            description: Preço unitário do Produto
           - name: unitpricediscount
           - name: rowguid
           - name: modifieddate
       - name: aw_sales_order_header
         columns:
           - name: salesorderid
+            description: Chave Primaria 
           - name: revisionnumber
           - name: orderdate
+            description: Data da compra 
           - name: duedate
+            description: Data de Vencimento
           - name: shipdate
+            description: Data de Envio
           - name: status
+            description: Status do Envio do Produto
           - name: onlineorderflag
           - name: purchaseordernumber
           - name: accountnumber
@@ -82,47 +100,68 @@ sources:
           - name: subtotal
           - name: taxamt
           - name: freight
+            description: Frete
           - name: totaldue
+            description: Total do Débito
           - name: comment
           - name: rowguid
           - name: modifieddate
       - name: aw_sales_reason
         columns:
           - name: salesreasonid
+            description: Chave Primaria 
           - name: name
+            description: Nome/Motivo da Venda/ Marketing
           - name: reasontype
+            description: Motivo da Venda
           - name: modifieddate
       - name: aw_person_state_province
         columns:
-        - name: customerid
-        - name: personid
-        - name: storeid
-        - name: territoryid
-        - name: rowguid
-        - name: modifieddate
+          - name: stateprovinceid
+            description: Chave Primaria
+          - name: stateprovincecode
+            description: Acronimo do Estado
+          - name: countryregioncode
+            description: Acronimo do Páis
+          - name: isonlystateprovinceflag
+          - name: name
+            description: Nome do Estado
+          - name: territoryid
+          - name: rowguid
       - name: aw_product
         columns:        
         - name: productid
+          description: Chave Primaria
         - name: name
+          description: Nome do Produto
         - name: productnumber
+          description: Numero do Produto/ Codigo
         - name: makeflag
         - name: finishedgoodsflag
         - name: color
+          description: Cor do Produto
         - name: safetystocklevel
+          description: Nivel de segurança pro estoque
         - name: reorderpoint
         - name: standardcost
+          description: Custo Padrão
         - name: listprice
+          description: Preço de Tabela
         - name: size
+          description: Tamanho do Produto
         - name: sizeunitmeasurecode
         - name: weightunitmeasurecode
         - name: weight
+          description: Peso do Produto
         - name: daystomanufacture
+          description: Dias para Fabricar o Produto
         - name: productline
         - name: class
         - name: style
         - name: productsubcategoryid
         - name: productmodelid
         - name: sellstartdate
+          description: Date de Inicio de Venda
         - name: sellenddate
         - name: discontinueddate
         - name: rowguid
@@ -130,7 +169,9 @@ sources:
       - name: aw_sales_customer
         columns:
           - name: customerid
+            description: Chave Primaria
           - name: personid
+            description: Chave Estrangeira da tabela Person
           - name: storeid
           - name: territoryid
           - name: rowguid
@@ -138,6 +179,7 @@ sources:
       - name: aw_sales_salesorder_header_sales_reason
         columns:
         - name: salesorderid
+          description: Chave Primaria
         - name: salesreasonid
         - name: modifieddate
         

@@ -1,10 +1,10 @@
 with source_sales_reason as
 (
     select 
-        salesreasonid
+        salesreasonid as sales_reason_id
         ,`name` as sales_name	
-        ,reasontype
-        ,modifieddate
+        ,reasontype as reason_type
+        ,modifieddate as modified_date
     from{{source('aw_proj_final','aw_sales_reason')}}
 )
 

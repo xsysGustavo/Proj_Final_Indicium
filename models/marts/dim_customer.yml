@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_customer
+    columns:
+      - name: location_sk
+        description: Chave Primaria da dimensão dim_customer
+        #tests:
+      - name: customer_id
+      - name: business_entity_id
+      - name: person_id
+      - name: person_type
+      - name: first_name
+      - name: middle_name
+      - name: last_name
+       

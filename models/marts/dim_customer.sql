@@ -15,10 +15,11 @@ with
         ,sales_customer.customer_id
         ,person.business_entity_id
         ,sales_customer.person_id
+        , concat(person.first_name, ' ',person.middle_name, ' ',person.last_name  ) as full_name
         ,person.person_type
-        ,person.first_name
-        ,person.middle_name
-        ,person.last_name
+        --,person.first_name
+        --,person.middle_name
+        --,person.last_name
     from person
     left join sales_customer 
         on person.business_entity_id = sales_customer.person_id
